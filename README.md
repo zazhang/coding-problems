@@ -1,6 +1,9 @@
-# LeetCode
-
+# Coding Problems
 ### @author: Albert
-### @date: 09/07/2016
 
-leetcode problem set
+## Leetcode
+
+## InterviewBit
+The programming section has eight levels covering all important topics in computer science.
+
+The folder contains all the practice problems and examples.
