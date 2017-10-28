@@ -1,3 +1,10 @@
+#!usr/bin/env ipython
+
+"""Coding interview problem (): 
+
+
+"""
+
 class Solution:
     def twoSum(self, nums, target):
         tmp = nums[:]
@@ -29,9 +36,28 @@ class Solution:
             return True
         else:
             return False
-# Binary search is two slow.
-# This implementation won't be able to avoid using same
-# number twice.
+    # Binary search is too slow.
+    # This implementation won't be able to avoid using same
+    # number twice.
+
+    # This implementation uses hash table/dictionary
+    # @param {integer[]} nums
+    # @param {integer} target
+    # @return {integer[]}
+    def twoSum2(self, nums, target):
+        length = len(nums)
+        table = dict()
+        for j in range(length):
+            diff = target - nums[j]
+            if diff in table:
+                return (table[diff] + 1, j + 1)
+            table[nums[j]] = j  # assign values to the dict
+    # We use harsh table (dict()) to search quickly (O(n)).
+    # We swap the keys and values so that we can search for 'keys'
+    # using values.
+    # Values are inserted after search to avoid same number been
+    # used twice.
+
 
 if __name__ == "__main__":
     a = Solution()

@@ -1,3 +1,11 @@
+#!usr/bin/env ipython
+
+"""Coding interview problem (): 
+
+Find longest string without repeating characters
+
+"""
+
 class Solution:
     # @param {string} s
     # @return {integer}
@@ -16,7 +24,8 @@ class Solution:
             positions[s[i]] = i
         return longestSubstring
 
-    def lengthOfLongestSubstring1(self, s):  ## still have problems, can only identify nonrepeat characters not substring
+    # !!! still have problems, can only identify nonrepeat characters not substring
+    def lengthOfLongestSubstring2(self, s):  
         nonrepeatlist = list()
         repeatlist = list()
         table = dict()
