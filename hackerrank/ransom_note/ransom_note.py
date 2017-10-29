@@ -10,11 +10,12 @@ import sys
 from collections import defaultdict
 
 
-# This implementation is slow, O(n*m)
-# @param magazine : a list of strings
-# @param ransom : a list of strings
-# @return boolean value
 def ransom_note(magazine, ransom):
+    """This implementation is slow, O(n*m)
+    @param magazine : a list of strings
+    @param ransom : a list of strings
+    @return boolean value
+    """
     m = len(magazine)
     n = len(ransom)
     
@@ -32,11 +33,12 @@ def ransom_note(magazine, ransom):
     #sys.stderr.write("final i is %s\n" %i)
     return True # otherwise, can use magazine, return true
 
-# This is an answer implementation
-# @param magazine : a list of strings
-# @param ransom : a list of strings
-# @return boolean value
 def ransom_note2(magazine, ransom):
+    """This is an answer implementation
+    @param magazine : a list of strings
+    @param ransom : a list of strings
+    @return boolean value    
+    """
     mdict = defaultdict(int)
 
     for word in magazine:
@@ -49,12 +51,11 @@ def ransom_note2(magazine, ransom):
 
     return True
     
-    
-    
 
 if __name__ == '__main__':
          
     filename = "input1.txt"
+    
     # Read input from prompt
     with open( filename ) as f:
 

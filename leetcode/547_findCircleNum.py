@@ -122,7 +122,5 @@ if __name__ == '__main__':
 
     s = Solution() # create Solution object
 
-    #A = (1,1,2,2,3,3,3,3,3,4,4,5,6,7,8,9)
-    A = [1]
-    B = 1
-    print s.findCount(A,B)
+    A = [[1,0,0],[0,1,0],[0,0,1]]
+    print s.findCircleNum4(A)
