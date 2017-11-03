@@ -26,15 +26,17 @@ class Solution(object):
         @param A: a list of integers
         @return float denoting the median of the array, to 1 decimal place
         """
+        if A == []:
+            return 0        
         n = len(A)
         sort_A = sorted(A)
-        if n % 2 == 0:
+        if n % 2 == 0 and n != 1:
             mid = n / 2
             mid2 = mid - 1
             median = (sort_A[mid]+sort_A[mid2]) / 2.0
         else:
-            mid = math.ceil(n / 2.0)
-            mediam = sort_A[mid] / 2.0
+            mid = int(math.ceil(n / 2))
+            median = sort_A[mid]
         return median
 
     def calc_mode(self, A):
