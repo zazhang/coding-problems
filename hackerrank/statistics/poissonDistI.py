@@ -13,7 +13,8 @@ class Solution(object):
     def poissonDist(self, lam, k):
         """
         @param lam: float representing the lambda of poisson distribution
-        @param k: the actual number of events for poisson random variable 
+        @param k: int representing the actual number of events 
+                  for poisson random variable 
         @return float denoting the probability, to 3 decimal place
         """
         f = lam**k * math.exp(-lam) / math.factorial(k)
