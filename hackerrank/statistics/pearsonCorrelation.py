@@ -16,7 +16,7 @@ class Solution(object):
         @param A: a list of integers
         @return float denoting the mean of the array
         """
-        n = len(A)
+        n = float(len(A))
         sum_num = sum(A)
         res = sum_num / n
 
