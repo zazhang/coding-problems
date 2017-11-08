@@ -6,9 +6,6 @@ Calculate quartiles
 
 """
 
-import math
-
-
 class Solution(object):
     def calc_median(self, A):
         """
@@ -24,7 +21,7 @@ class Solution(object):
             mid2 = mid - 1
             median = (sort_A[mid]+sort_A[mid2]) / 2.0
         else:
-            mid = int(math.ceil(n / 2))
+            mid = n / 2
             median = sort_A[mid]
         return median
     
@@ -38,10 +35,14 @@ class Solution(object):
         n = len(A)
         q2 = int(self.calc_median(A))
         sort_A = sorted(A)
-        first_half = sort_A[:n/2]
-        second_half = sort_A[n/2+1:]
-        q1 = int(self.calc_median(first_half))
-        q3 = int(self.calc_median(second_half))
+        if n % 2 == 0:
+            first_half = sort_A[:n/2]
+            second_half = sort_A[n/2:]
+        else:
+            first_half = sort_A[:n/2]
+            second_half = sort_A[n/2+1:]
+        q1 = self.calc_median(first_half)
+        q3 = self.calc_median(second_half)
         return [q1, q2, q3]
 
 
@@ -55,4 +56,4 @@ if __name__ == '__main__':
     test3 = [12, 4, 17, 7, 14, 18, 12, 3, 16, 10, 4, 4, 12]
     #size = (raw_input())
     #numbers = list(map(int, raw_input().strip().split(' ')))
-    print s.quartiles(test3)
+    print s.quartiles(test2)
