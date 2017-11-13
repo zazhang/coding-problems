@@ -2,10 +2,13 @@
 
 """Poisson Distribution II (statistics)
 
-The manager of a industrial plant is planning to buy a machine of either type A or type B. For each day’s operation:
+The manager of a industrial plant is planning to buy a machine of either 
+type A or type B. For each day’s operation:
 
-The number of repairs, X, that machine A needs is a Poisson random variable with mean 0.88. The daily cost of operating A is C_A = 160+40*X^2.
-The number of repairs, Y, that machine B needs is a Poisson random variable with mean 1.55. The daily cost of operating B is C_B = 128+40*Y^2.
+The number of repairs, X, that machine A needs is a Poisson random variable 
+with mean 0.88. The daily cost of operating A is C_A = 160+40*X^2.
+The number of repairs, Y, that machine B needs is a Poisson random variable 
+with mean 1.55. The daily cost of operating B is C_B = 128+40*Y^2.
 
 """
 
@@ -20,7 +23,6 @@ class Solution(object):
         @return a list of float denoting the cost of A and B, to 3 
             decimal place
         """
-        
         ca = 160+40*(lam1+lam1**2)
         cb = 128+40*(lam2+lam2**2)
         return [round(ca,3), round(cb,3)]
