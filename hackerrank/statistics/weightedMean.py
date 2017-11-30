@@ -19,9 +19,12 @@ class Solution(object):
             return 0
         
         sum_weights = sum(W)
+        """
         prod = []
         for i in xrange(n):
             prod.append(A[i]*W[i])
+        """
+        prod = [a*w for a, w in zip(A, W)] # a simpler implementation
         sum_prod = sum(prod)
         res = sum_prod * 1.0 / sum_weights
 

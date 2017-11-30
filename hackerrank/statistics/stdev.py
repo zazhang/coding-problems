@@ -28,9 +28,7 @@ class Solution(object):
         """
         n = len(A)
         mean = self.calc_mean(A)
-        diff_square = []
-        for i in xrange(n):
-            diff_square.append((A[i] - mean)**2)
+        diff_square = [(a-mean)**2 for a in A]
         sum_diff_square = sum(diff_square)
 
         sigma = math.sqrt(sum_diff_square/n)

@@ -36,10 +36,14 @@ class Solution(object):
         if A == []:
             return 0
         n = len(A)
-        q2 = self.calc_median(A)
+        q2 = int(self.calc_median(A))
         sort_A = sorted(A)
-        first_half = sort_A[:n/2]
-        second_half = sort_A[n/2+1:]
+        if n % 2 == 0:
+            first_half = sort_A[:n/2]
+            second_half = sort_A[n/2:]
+        else:
+            first_half = sort_A[:n/2]
+            second_half = sort_A[n/2+1:]
         q1 = self.calc_median(first_half)
         q3 = self.calc_median(second_half)
         return [q1, q2, q3]

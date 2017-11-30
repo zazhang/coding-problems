@@ -2,10 +2,12 @@
 
 """Geometric Distribution II (statistics)
 
-The probability that a machine produces a defective product is 1/3. What is the probability that the 1st defect is found during the first 5 inspection?
+The probability that a machine produces a defective product is 1/3. 
+What is the probability that the 1st defect is found during the **first** 
+5 inspection?
 
-Notes: meaning 1st defect at 1st inspection + 1st defect at 2nd insepction + ...
-+ 1st defect at 5th inspection
+Notes: "during the first 5 insepction" meaning 1st defect at 1st inspection + 
+1st defect at 2nd insepction + ... + 1st defect at 5th inspection
 
 """
 
