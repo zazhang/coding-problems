@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/main.cpp
+iostream
+-
+map
+-
+numeric
+-
+
