@@ -49,22 +49,28 @@ merge_maps( std::map<Key,Value> const & lhs, std::map<Key,Value> const & rhs )
     return result;
 }
 
-// find differences of two maps
+// find differences of two maps, return all elements of `a` that are not in `b`
 map<char, int> FindDiff(map<char, int> a, map<char, int> b){
     map<char, int> c;
 
+    /*
     std::set_difference(
             a.begin(), a.end(),
             b.begin(), b.end(),
             std::inserter(c, c.begin()) );
     //std::back_inserter needs container to support `push_back` function
     //map container does not support `push_back`
+     */
+
+    for(auto it : a){
+        if(b.find(it.first) == b.end()) c.insert(it);
+    }
 
     return c;
 }
 
 int anagrams(string a, string b) {
-
+    int result = 0;
     map<char, int> countA;
     map<char, int> countB;
     map<char, pair<int, int> > common;
@@ -73,32 +79,12 @@ int anagrams(string a, string b) {
 
     countA = counter(a);
     countB = counter(b);
-    //common = merge_maps(countA, countB);
+    common = merge_maps(countA, countB);
     uncommonA = FindDiff(countA, countB);
     uncommonB = FindDiff(countB, countA);
 
-    // O(n^2), bad implementation to take out double counting characters
-    int result = 0;
-    if (a.length() < b.length()){
-        for(auto it : uncommonA){
-            for(auto it2 : uncommonB){
-                if(it.first == it2.first){
-                    result -= 2;
-                }
-            }
-        }
-    } else {
-        for(auto it : uncommonB){
-            for(auto it2 : uncommonA){
-                if(it.first == it2.first){
-                    result -= 2;
-                }
-            }
-        }
-    }
-
     // add all values in uncommonA
-    result += std::accumulate(std::begin(uncommonA), std::end(uncommonA), 0,
+    result = std::accumulate(std::begin(uncommonA), std::end(uncommonA), 0,
                                  [](const int previous,
                                     const std::pair<char, int> &p) { return previous + p.second; });
 
@@ -107,7 +93,6 @@ int anagrams(string a, string b) {
                                  [](const int previous,
                                     const std::pair<char, int> &p) { return previous + p.second; });
 
-    /*
     int num = 0;
     for (auto it : common) {
 
@@ -115,7 +100,6 @@ int anagrams(string a, string b) {
         num += abs(temp.first - temp.second);
     }
     result += num;
-     */
 
     return result;
 }
@@ -126,7 +110,8 @@ int main(){
 
     cout << "The number of characters needs to be deleted is " << anagrams(a, b) << endl;
 
-    /* debug section
+    /*
+    // debug section
     map<char, int> temp = counter(a);
     map<char, int> temp2 = counter(b);
     map<char, pair<int, int> > common = merge_maps(temp, temp2);
@@ -137,7 +122,8 @@ int main(){
         std::cout << it->first << " " << it->second.first << " " << it->second.second<< "\n";
         //std::cout << it->first << " " << it->second<< "\n";
     }
-    */
+     */
+
 
 }
 
