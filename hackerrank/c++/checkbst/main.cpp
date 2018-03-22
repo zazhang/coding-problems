@@ -1,6 +1,6 @@
-#!usr/bin/env ipython
+#include <iostream>
 
-""" Is it a BST (binary search tree)
+/* Is it a BST (binary search tree)
 For the purposes of this challenge, we define a binary search tree 
 to be a binary tree with the following ordering properties:
 
@@ -34,45 +34,51 @@ Input:
 Output:
 No
 
-"""
+*/
 
-from operator import mul
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+} a, b, c, d, e, f, g;
 
-class node:
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
+bool check(Node* root, int* prev){
+    bool result = true;
+    if (root->left != nullptr){
+        result &= check(root->left, prev);
+    }
+    //std::cout << "before: " << prev << std::endl;
+    if (*prev >= root->data){
+        result &= false;
+    }
+    *prev = root->data;
+    //std::cout << "after: " << prev << std::endl;
+    if (root->right != nullptr){
+        result &= check(root->right, prev);
+    }
 
-def checkBST(root):
-    return check(root, [-1])
+    return result;
+}
 
-def check(root, prev):
-    result = True
-    if root.left is not None:
-        result &= check(root.left, prev)
-    if prev[0] >= root.data:
-        return False
-    prev[0] = root.data
-    if root.right is not None:
-        result &= check(root.right, prev)
-    return result
+bool checkBST(Node* root){
+    int prev = -1;
+    return check(root, &prev);
+}
 
-if __name__ == '__main__':
+int main() {
+    a.data = 3;
+    a.left = &b;
+    a.right = &c;
+    b.data = 2;
+    c.data = 6;
+    b.left = &e;
+    b.right = &f;
+    e.data = 1;
+    f.data = 4;
+    c.left = &d;
+    c.right = &g;
+    d.data = 5;
+    g.data = 7;
 
-    a = node(4)
-    b = node(2)
-    c = node(6)
-    d = node(1)
-    e = node(3)
-    f = node(5)
-    g = node(7)
-    a.left = b
-    a.right = c    
-    b.right = e
-    b.left = d
-    c.left = f
-    c.right = g
-    answer = checkBST(a)
-    print answer
-
+    std::cout << "This binary is a BST " << checkBST(&a) << std::endl;
+}
