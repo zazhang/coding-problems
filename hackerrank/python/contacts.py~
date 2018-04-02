@@ -1,0 +1,129 @@
+#!~/usr/bin/env ipython
+
+""" Contacts (Tries)
+
+Tries: a tree data structure that stores characters as nodes, and 
+check weather the path forms a word.
+
+The contacts application must perform two types of operations:
+
+1. add name, where `name` is a string denoting a contact name. 
+This must store `name` as a new contact in the application.
+2. find partial, where `partial` is a string denoting a partial name 
+to search the application for. It must count the number of contacts 
+starting with `partial` and print the count on a new line.
+
+"""
+
+class Node():
+   def __init__(self):
+       """
+       Note that using dictionary for children (as in this
+       implementation) would not allow lexicographic sorting
+       mentioned in the next section (Sorting),
+       because ordinary dictionary would not preserve the order
+       of the keys.
+       """
+       self.children = {}  # mapping from character ==> Node
+       self.value = None
+
+def find_key(node, key):
+    """
+    @param node: Node
+    @param key: char
+    @return string
+    """
+    for char in key:
+        if char in node.children:
+            node = node.children[char]
+        else:
+            return None
+    return node.value
+
+def add(root, string, value):
+    """
+    @param root: Node
+    @param string: str
+    @return Node
+    """
+    node = root
+    i = 0
+    while i < len(string):
+        if string[i] in node.children:
+            node = node.children[string[i]]
+            i += 1
+        else:
+            break
+
+    # append new nodes for the remaining characters, if any
+    while i < len(string):
+        node.children[string[i]] = Node()
+        node = node.children[string[i]]
+        i += 1
+        
+    # store value in the terminal node
+    node.value = value
+
+"""    
+def add(node, name):
+    char_list = [i for i in name]
+    temp_str_list = []
+    for j in char_list:
+        temp_str_list.append(j)
+        temp_str = ''.join(temp_str_list)
+        insert(node, j, temp_str)
+    
+    return node
+"""
+
+# TODO: revise this function to use new `add` function
+def find(node, partial):
+    """
+    """
+    char_list = [i for i in partial]
+    temp_list = []
+    for j in char_list:
+        temp = find_key(node, j) != None
+        temp_list.append(temp)
+    count = temp_list.count(True)
+    return count
+
+"""
+def contacts_app(op, contact):
+
+    expr = op
+    
+    # passing variable x in safe dictionary
+    safe_dict['contact'] = contact
+ 
+    # evaluating expression
+    output = eval(expr, {"__builtins__":None}, safe_dict)
+
+    print "out={}".format(output)
+
+n = int(raw_input().strip())
+safe_list = ['add', 'find']
+safe_dict = dict([(k, locals().get(k, None)) for k in safe_list])
+for a0 in xrange(n):
+    op, contact = raw_input().strip().split(' ')
+    contacts_app(op, contact)
+"""
+
+
+if __name__ == '__main__':
+    """
+    node = Node()
+    n = int(raw_input().strip())
+    for a0 in xrange(n):
+        op, contact = raw_input().strip().split(' ')
+        if op == 'add':
+            add(node, contact)
+        if op == 'find':
+            print find(node, contact)
+    """
+    node = Node()
+    add(node, 'hack', True)
+    add(node, 'hackerrank', 'hackerrank')
+    answer = find(node, 'hac')
+    print answer
+
