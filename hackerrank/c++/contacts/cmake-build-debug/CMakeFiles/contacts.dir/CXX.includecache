@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/contacts/main.cpp
+iostream
+-
+map
+-
+fstream
+-
+vector
+-
+

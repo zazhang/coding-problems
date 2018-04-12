@@ -1,7 +1,0 @@
-#! /usr/bin/env ipython
-
-def add():
-    re = 1 + 2
-    return re
-
-eval('add')

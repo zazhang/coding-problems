@@ -25,9 +25,11 @@ class Node():
        of the keys.
        """
        self.children = {}  # mapping from character ==> Node
-       self.value = None
+       #self.value = None
+       self.end = False
+       self.size = 0
 
-def find_key(node, key):
+def find(node, key):
     """
     @param node: Node
     @param key: char
@@ -37,20 +39,26 @@ def find_key(node, key):
         if char in node.children:
             node = node.children[char]
         else:
-            return None
-    return node.value
-
-def add(root, string, value):
+            return 0
+    
+    #result = []
+    #traverse(node, list(key), result)
+    #answer = [''.join(r) for r in result]
+    #return len(answer)
+    return node.size
+    
+def add(root, string):
     """
     @param root: Node
     @param string: str
-    @return Node
+    @return None
     """
     node = root
     i = 0
     while i < len(string):
         if string[i] in node.children:
             node = node.children[string[i]]
+            node.size += 1
             i += 1
         else:
             break
@@ -59,60 +67,27 @@ def add(root, string, value):
     while i < len(string):
         node.children[string[i]] = Node()
         node = node.children[string[i]]
+        node.size += 1
         i += 1
         
     # store value in the terminal node
-    node.value = value
+    #node.value = value
+    node.end = True
 
-"""    
-def add(node, name):
-    char_list = [i for i in name]
-    temp_str_list = []
-    for j in char_list:
-        temp_str_list.append(j)
-        temp_str = ''.join(temp_str_list)
-        insert(node, j, temp_str)
+def traverse(node, partial, result):
+    if node.end:
+        result.append(partial[:])
     
-    return node
-"""
+    for char, n in node.children.items():
+        partial.append(char)
+        traverse(n, partial, result)
+        partial.pop(-1)
 
-# TODO: revise this function to use new `add` function
-def find(node, partial):
-    """
-    """
-    char_list = [i for i in partial]
-    temp_list = []
-    for j in char_list:
-        temp = find_key(node, j) != None
-        temp_list.append(temp)
-    count = temp_list.count(True)
-    return count
-
-"""
-def contacts_app(op, contact):
-
-    expr = op
-    
-    # passing variable x in safe dictionary
-    safe_dict['contact'] = contact
- 
-    # evaluating expression
-    output = eval(expr, {"__builtins__":None}, safe_dict)
-
-    print "out={}".format(output)
-
-n = int(raw_input().strip())
-safe_list = ['add', 'find']
-safe_dict = dict([(k, locals().get(k, None)) for k in safe_list])
-for a0 in xrange(n):
-    op, contact = raw_input().strip().split(' ')
-    contacts_app(op, contact)
-"""
-
-
+        
 if __name__ == '__main__':
-    """
+
     node = Node()
+    """
     n = int(raw_input().strip())
     for a0 in xrange(n):
         op, contact = raw_input().strip().split(' ')
@@ -121,9 +96,30 @@ if __name__ == '__main__':
         if op == 'find':
             print find(node, contact)
     """
+    """
     node = Node()
-    add(node, 'hack', True)
+    add(node, 'hack', 'hack')
     add(node, 'hackerrank', 'hackerrank')
     answer = find(node, 'hac')
     print answer
+    """
 
+    # Read input from file
+    filename = "input3.txt"
+    filename2 = "output3.txt"
+    with open( filename ) as f, open( filename2 ) as g:        
+        content = f.readlines()
+        result = g.readlines()
+        n = [x.strip() for x in content[0]]
+        n = int(''.join(n))
+        content = [x.strip() for x in content[1:]]
+        result = [y.strip() for y in result]
+        temp = []
+        for a0 in xrange(n):
+            op, contact = content[a0].strip().split(' ')
+            if op == 'add':
+                add(node, contact)
+            if op == 'find':
+                #print find(node, contact) == int(result[a0/2])
+                temp.append(find(node, contact) == int(result[a0/2]))
+        print reduce(lambda x, y: x*y, temp)
