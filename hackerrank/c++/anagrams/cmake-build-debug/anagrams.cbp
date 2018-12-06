@@ -8,84 +8,84 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
+				<Option working_dir="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
+				<Option working_dir="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
+				<Option working_dir="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="anagrams">
-				<Option output="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/anagrams" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
+				<Option output="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/anagrams" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 anagrams"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 anagrams"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="anagrams/fast">
-				<Option output="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/anagrams" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
+				<Option output="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/anagrams" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 anagrams/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 anagrams/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/main.cpp">
+		<Unit filename="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/main.cpp">
 			<Option target="anagrams"/>
 		</Unit>
-		<Unit filename="/Users/Albert/Documents/Projects/coding-problems/hackerrank/c++/anagrams/CMakeLists.txt">
+		<Unit filename="/Users/zhizunzhang/Documents/Projects/coding-problems/hackerrank/c++/anagrams/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
